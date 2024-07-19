@@ -8,9 +8,15 @@
 
 ## 使用说明
 
+### 下载
+
 我在 [Releases](https://github.com/ETO-QSH/DesmosPaintingETO/releases) 里面提供了已经打包好的项目，我使用pyinstaller打包，并且我执意使用onefile模式生成单文件exe使得相较于自己运行.py文件占用了更大的体积，所以看起来有些庞大不是。
 
 总之，你可以直接下载最新的releases，解压后会得到四个exe文件，一个md文件（就是本文），以及一个pdf文件（本文pdf版）。四个exe中，DesmosPaintingETO.exe是主程序负责GUI，netwoke.exe和showdata.exe是对主程序的支持，分别负责web服务器和展示data，potrace.exe是真正的核心，是一个很有名的算法（大概）。
+
+这里是potrace的链接：[github](https://github.com/lgcc/potrace)、[官网](https://potrace.sourceforge.net/)，感兴趣的可以去瞅瞅。
+
+### 使用
 
 双击运行DesmosPaintingETO.exe，你会打开这样一个界面（已点击展开）。用tk画的，画的还可以吧 ~
 
@@ -29,6 +35,8 @@
 |开始绘制|运行同时反馈运行状态|运行但不打开showdata.exe
 
 你可能会注意到展开后一排排乱七八糟的什么参数，其实可能用到的并不多，旁边的 **?** 有所解释，控制变量起来也不是很麻烦，对于不太复杂（什么乱七八糟的阴影手绘高光）的图片处理起来非常轻松，默认的参数大概就能解决问题。（比如上面的，我真没调的说，一打开就这样）
+
+### 测试
 
 下面给出部分测试过的样本，在 [src](https://github.com/ETO-QSH/DesmosPaintingETO/tree/main/src) 里面有原图，成果在 [output](https://github.com/ETO-QSH/DesmosPaintingETO/tree/main/output) 里面。（一些比例问题和渲染问题是开发早期的结果）
 
@@ -60,6 +68,8 @@ def find_and_terminate_process(window_title):
 find_and_terminate_process("netwoke.exe")
 ```
 
+### 尾音
+
 早期测试时的一个小插曲 ~
 
 ![390f824238f44acb1c5ef625e192a983](https://github.com/user-attachments/assets/7cf6df93-e2f6-482c-85a6-9250716b1299)
@@ -71,6 +81,8 @@ find_and_terminate_process("netwoke.exe")
 ![image}{Z5$ B2EEIIY24HU( 6](https://github.com/user-attachments/assets/d62dc58f-cda3-4351-b6ee-7c2c073abc85)
 
 如果你像我一样勾选了自动下载，你会在 output 文件夹里面看到一对新的gif和zip文件（文件名随时间），这就完成了所有工作了。
+
+### 说明
 
 如果这个你喜欢这个项目，我能不能混一个免费的**Star**呢，谢谢喵 ~
 
