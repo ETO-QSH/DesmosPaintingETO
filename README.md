@@ -74,5 +74,4 @@ find_and_terminate_process("netwoke.exe")
 
 如果这个你喜欢这个项目，我能不能混一个免费的**Star**呢，谢谢喵 ~
 
-希望你用的开心 ~
-
+###### 本项目采用 GNU Affero General Public License v3.0 协议
