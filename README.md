@@ -55,6 +55,7 @@
 |Yoolalouse.jpg|![Yoolalouse.jpg](https://github.com/ETO-QSH/DesmosPaintingETO/blob/main/src/Yoolalouse.jpg)|![output-png-20240709113018.gif](https://github.com/ETO-QSH/DesmosPaintingETO/blob/main/output/output-png-20240709113018.gif)|`{'turnpolicy': 'MINORITY', 'unit': 3, 'alphamax': 0.75, 'opttolerance': 0.5, 'turdsize': 2, 'opticurve': 'True', 'diameter': 5, 'L2gradient': 'False', 'sigmaColor': 50, 'sigmaSpace': 50, 'lower': 60, 'upper': 150, 'modified': 5}}`
 |略nd.mp4|![]()|![]()|`{'turnpolicy': 'MINORITY', 'unit': 3, 'alphamax': 0.75, 'opttolerance': 0.5, 'turdsize': 5, 'opticurve': 'True', 'diameter': 15, 'L2gradient': 'False', 'sigmaColor': 50, 'sigmaSpace': 50, 'lower': 95, 'upper': 100, 'modified': 5}}`
 |ai.jpg|![ai.png](https://github.com/ETO-QSH/DesmosPaintingETO/blob/main/src/ai.png)|![output-png-20240710005336.gif](https://github.com/ETO-QSH/DesmosPaintingETO/blob/main/output/output-png-20240710005336.gif)|`{'turnpolicy': 'MINORITY', 'unit': 3, 'alphamax': 0.75, 'opttolerance': 0.5, 'turdsize': 2, 'opticurve': 'True', 'diameter': 5, 'L2gradient': 'False', 'sigmaColor': 50, 'sigmaSpace': 50, 'lower': 60, 'upper': 150, 'modified': 5}`
+|warma.jpg|![warma.jpg](https://github.com/ETO-QSH/DesmosPaintingETO/blob/main/src/warma.jpg)|![output-png-20240720112948.gif](https://github.com/ETO-QSH/DesmosPaintingETO/blob/main/output/output-png-20240720112948.gif)|`{'turnpolicy': 'MINORITY', 'unit': 3, 'alphamax': 0.75, 'opttolerance': 0.5, 'turdsize': 2, 'opticurve': 'True', 'diameter': 5, 'L2gradient': 'False', 'sigmaColor': 50, 'sigmaSpace': 50, 'lower': 60, 'upper': 150, 'modified': 5}`
 
 如果你决定要亲手调参，有一个技巧就是我们先勾选**不自动打开web**，他会在 edged 目录下面生成成对的文件，一个png一个svg，分别是提到的cv2和potrace的结果。这样在不进行web渲染之前就能看到效果会方便些。不足就是可能要求任务管理器查杀netwoke.exe（调好之后杀就行），或者说可以试试运行这个（psutil是要pip的），它会帮你做到！
 
@@ -89,6 +90,8 @@ find_and_terminate_process("netwoke.exe")
 本项目一开始是在Linux下面开发的，因为potrace的python库只在Linux有效，故我保留了Linux时期的代码（有点老旧了，一些tk的api还用不了），但暂时没有继续完善的打算（画gui累死个人）。
 
 里面还有一个**为Windows多进程版本开发的DesmosETO**，这是一开始的设想，我希望在一个文件里面完成所有事（听起来就舒服），但是tk和multiprocessing的兼容性搞得我十分头大，新引入的tkintertools又把我的gui毁了（字面意思，本来依靠一个tk的dpi缩放bug运行，tkintertools说它顺手给修了，啊？）。所以我搞了个三家分晋给他裂了三个exe，但是这样搞得好大的库包了三次，本来用pyinstaller包80M就能解决的现在搞那么大。有大佬会的可以教教不是。
+
+![image](https://github.com/user-attachments/assets/b0b7a522-afd9-448a-a2bc-499a39ab2475)
 
 ### 说明
 
