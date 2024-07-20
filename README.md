@@ -36,7 +36,7 @@
 
 你可能会注意到展开后一排排乱七八糟的什么参数，其实可能用到的并不多，旁边的 **?** 有所解释，控制变量起来也不是很麻烦，对于不太复杂（什么乱七八糟的阴影手绘高光）的图片处理起来非常轻松，默认的参数大概就能解决问题。（比如上面的，我真没调的说，一打开就这样）
 
-对于一些大型的图片和视频，我只能说我的程序能跑出结果（edged文件夹），但是把大量数据发送到你的浏览器里面你的内存可能会吃不消（out of memory）。对于一些超大的图片你可以适当的缩小先，边缘检测的时候会丢失很少的细节，一个视频（包括gif）会被分解成帧先，或者你可以尝试进行分段？总之减少线条的数量。
+对于一些大型的图片和视频，我只能说我的程序能跑出结果（edged文件夹），但是把大量数据发送到你的浏览器里面你的内存可能会吃不消（错误代码: Out of Memory）。对于一些超大的图片你可以适当的缩小先，边缘检测的时候会丢失很少的细节（L2可以救但是没必要），一个视频（包括gif）会被分解成帧先，或者你可以尝试进行分段？调参也可以减少线条的数量。总之请减少线条的数量！
 
 成果的颜色可以看得出来会比原来选择的颜色要淡，因为是线条跟白色背景混合了。
 
@@ -65,6 +65,8 @@
 |ai.jpg|![ai.png](https://github.com/ETO-QSH/DesmosPaintingETO/blob/main/src/ai.png)|![output-png-20240710005336.gif](https://github.com/ETO-QSH/DesmosPaintingETO/blob/main/output/output-png-20240710005336.gif)|`{'turnpolicy': 'MINORITY', 'unit': 3, 'alphamax': 0.75, 'opttolerance': 0.5, 'turdsize': 2, 'opticurve': 'True', 'diameter': 5, 'L2gradient': 'False', 'sigmaColor': 50, 'sigmaSpace': 50, 'lower': 60, 'upper': 150, 'modified': 5}`
 |warma.jpg|![warma.jpg](https://github.com/ETO-QSH/DesmosPaintingETO/blob/main/src/warma.jpg)|![output-png-20240720112948.gif](https://github.com/ETO-QSH/DesmosPaintingETO/blob/main/output/output-png-20240720112948.gif)|`{'turnpolicy': 'MINORITY', 'unit': 3, 'alphamax': 0.75, 'opttolerance': 0.5, 'turdsize': 2, 'opticurve': 'True', 'diameter': 5, 'L2gradient': 'False', 'sigmaColor': 50, 'sigmaSpace': 50, 'lower': 60, 'upper': 150, 'modified': 5}`
 |艾雅法拉.png|![艾雅法拉.png](https://github.com/ETO-QSH/DesmosPaintingETO/blob/main/src/艾雅法拉.png)|![output-png-20240720120530.gif](https://github.com/ETO-QSH/DesmosPaintingETO/blob/main/output/output-png-20240720120530.gif)|`{'turnpolicy': 'MINORITY', 'unit': 3, 'alphamax': 0.75, 'opttolerance': 0.5, 'turdsize': 2, 'opticurve': 'True', 'diameter': 5, 'L2gradient': 'False', 'sigmaColor': 50, 'sigmaSpace': 50, 'lower': 60, 'upper': 150, 'modified': 5}`
+
+（后面摆烂了全部用预设参数了，这不更说明不用调也行不是）
 
 如果你决定要亲手调参，有一个技巧就是我们先勾选**不自动打开web**，他会在 edged 目录下面生成成对的文件，一个png一个svg，分别是提到的cv2和potrace的结果。这样在不进行web渲染之前就能看到效果会方便些。不足就是可能要求任务管理器查杀netwoke.exe（调好之后杀就行），或者说可以试试运行这个（psutil是要pip的），它会帮你做到！
 
