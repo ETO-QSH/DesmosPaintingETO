@@ -42,7 +42,7 @@
 
 ps：滑块可以点击左右空白的地方微调
 
-你可能会注意到展开后一排排乱七八糟的什么参数，其实可能用到的并不多，旁边的 **?** 有所解释，控制变量起来也不是很麻烦，对于不太复杂（什么乱七八糟的阴影手绘高光）的图片处理起来非常轻松，默认的参数大概就能解决问题。（比如上面的，我真没调的说，一打开就这样）
+你可能会注意到展开后一排排乱七八糟的什么参数，其实可能用到的并不多，旁边的 **?** 有所解释，控制变量起来也不是很麻烦，对于不太复杂（什么乱七八糟的阴影手绘高光虚化渐变）的图片处理起来非常轻松，默认的参数大概就能解决问题。（比如上面的，我真没调的说，一打开就这样）
 
 对于一些大型的图片和视频，我只能说我的程序能跑出结果（edged文件夹），但是把大量数据发送到你的浏览器里面你的内存可能会吃不消（错误代码: Out of Memory）。对于一些超大的图片你可以适当的缩小先，边缘检测的时候会丢失很少的细节（L2可以救但是没必要），一个视频（包括gif）会被分解成帧先，或者你可以尝试进行分段？调参也可以减少线条的数量。总之请减少线条的数量！
 
@@ -123,6 +123,7 @@ AttributeError: 'NoneType' object has no attribute 'write'
 |铃兰.png|![铃兰.png](https://github.com/ETO-QSH/DesmosPaintingETO/blob/main/src/铃兰.png)|![output-png-20240720143216.gif](https://github.com/ETO-QSH/DesmosPaintingETO/blob/main/output/output-png-20240720143216.gif)|`{'turnpolicy': 'MINORITY', 'unit': 3, 'alphamax': 0.75, 'opttolerance': 0.5, 'turdsize': 2, 'opticurve': 'True', 'diameter': 5, 'L2gradient': 'False', 'sigmaColor': 50, 'sigmaSpace': 50, 'lower': 60, 'upper': 150, 'modified': 5}`
 |星尘.jpg|![星尘.jpg](https://github.com/ETO-QSH/DesmosPaintingETO/blob/main/src/星尘.jpg)|![output-png-20240720154250.gif](https://github.com/ETO-QSH/DesmosPaintingETO/blob/main/output/output-png-20240720154250.gif)|`{'turnpolicy': 'MINORITY', 'unit': 3, 'alphamax': 0.75, 'opttolerance': 0.5, 'turdsize': 2, 'opticurve': 'True', 'diameter': 5, 'L2gradient': 'False', 'sigmaColor': 50, 'sigmaSpace': 50, 'lower': 60, 'upper': 150, 'modified': 5}`
 |ai.png|![ai.png](https://github.com/ETO-QSH/DesmosPaintingETO/blob/main/src/ai.png)|![output-png-20240720155857.gif](https://github.com/ETO-QSH/DesmosPaintingETO/blob/main/output/output-png-20240720155857.gif)|`{'turnpolicy': 'MINORITY', 'unit': 3, 'alphamax': 0.75, 'opttolerance': 0.5, 'turdsize': 2, 'opticurve': 'True', 'diameter': 5, 'L2gradient': 'False', 'sigmaColor': 50, 'sigmaSpace': 50, 'lower': 60, 'upper': 150, 'modified': 5}`
+|岁.jpg|![岁.jpg](https://github.com/ETO-QSH/DesmosPaintingETO/blob/main/src/岁.jpg)|![output-png-20240720181318.gif](https://github.com/ETO-QSH/DesmosPaintingETO/blob/main/output/output-png-20240720181318.gif)|`{'turnpolicy': 'MINORITY', 'unit': 3, 'alphamax': 0.75, 'opttolerance': 0.5, 'turdsize': 20, 'opticurve': 'True', 'diameter': 20, 'L2gradient': 'False', 'sigmaColor': 50, 'sigmaSpace': 50, 'lower': 30, 'upper': 60, 'modified': 5}`
 
 如果你决定要亲手调参，有一个技巧就是我们先勾选**不自动打开web**，他会在 edged 目录下面生成成对的文件，一个png一个svg，分别是提到的cv2和potrace的结果。这样在不进行web渲染之前就能看到效果会方便些。不足就是可能要求任务管理器查杀netwoke.exe（调好之后杀就行），或者说可以试试运行这个（psutil是要pip的），它会帮你做到！
 
