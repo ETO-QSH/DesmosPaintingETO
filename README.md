@@ -115,9 +115,8 @@ find_and_terminate_process("netwoke.exe")
 
 里面还有一个**为Windows多进程版本开发的DesmosETO**，这是一开始的设想，我希望在一个文件里面完成所有事（听起来就舒服），但是tk和multiprocessing的兼容性搞得我十分头大，新引入的tkintertools又把我的gui毁了（字面意思，本来依靠一个tk的dpi缩放bug运行，tkintertools说它顺手给修了，啊？）。
 
-所以我搞了个三家分晋给他裂了三个exe，但是这样搞得好大的库包了三次，本来用pyinstaller包80M就能解决的现在搞那么大。有大佬会的可以教教不是，先提前道个谢！
+所以我搞了个三家分晋给他裂了三个exe，但是这样搞得好大的库包了三次，本来用pyinstaller包80M就能解决的现在搞那么大。有大佬会的可以教教不是 ~
 
-这就算是本项目的**ToDoList**了把 ~
 
 ***
 
