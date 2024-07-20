@@ -185,6 +185,8 @@ find_and_terminate_process("netwoke.exe")
 
 如果被杀毒软件关小黑屋了可以救一下，世界上没那么多病毒。
 
+如果你得到了一些不错的作品可以在Issues里面分享鸭。
+
 如果这个你喜欢这个项目，我能不能混一个免费的**Star**呢，谢谢喵 ~
 
 ###### 本项目采用 GNU Affero General Public License v3.0 协议
