@@ -1,4 +1,4 @@
-# DesmosPaintingETO
+![image](https://github.com/user-attachments/assets/3e1727ef-4efe-47f0-b4cc-335fb40912e8)# DesmosPaintingETO
 
 ### 前言
 
@@ -53,6 +53,10 @@ ps：滑块可以点击左右空白的地方微调
 请检查一下文件格式，或者改中文路径为英文，还有事欢迎找我麻烦 ~
 
 我的窗口都没有进行置顶，要是桌面比较凌乱可能需要你找找。。。
+
+还有一个bug就是当你勾选矢量保存的时候应该会出现（除非你安装了reportlab），这个我用来把svg转png（这不是一个必要的功能，毕竟你都希望矢量保存了，我转是为了合成gif）。
+![image](https://github.com/user-attachments/assets/13446da9-271e-4d08-b72d-82e9f1ca7bf9)
+你可以忽略它，这不影响你正确运行程序，就是 output 里面只会有zip（里面是svg图像）而没有合成gif了。
 
 ***
 
