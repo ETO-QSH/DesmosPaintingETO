@@ -101,7 +101,7 @@ AttributeError: 'NoneType' object has no attribute 'write'
 
 ### 测试
 
-下面给出部分测试过的样本，在 [src](https://github.com/ETO-QSH/DesmosPaintingETO/tree/main/src) 里面有原图，成果在 [output](https://github.com/ETO-QSH/DesmosPaintingETO/tree/main/output) 里面。（一些比例问题和渲染问题是开发早期的结果）
+下面给出部分测试过的样本，在 [src](https://github.com/ETO-QSH/DesmosPaintingETO/tree/main/src) 里面有原图，成果在 [output](https://github.com/ETO-QSH/DesmosPaintingETO/tree/main/output) 里面。（一些比例问题是开发早期的老图）
 
 你大可以跳过这一段表格，因为其实并不重要，图是好久之前到处捡的，只是你真的不想看看效果的吗 ~
 
