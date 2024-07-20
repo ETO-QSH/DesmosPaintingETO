@@ -1,4 +1,4 @@
-![image](https://github.com/user-attachments/assets/3e1727ef-4efe-47f0-b4cc-335fb40912e8)# DesmosPaintingETO
+# DesmosPaintingETO
 
 ### 前言
 
@@ -48,15 +48,54 @@ ps：滑块可以点击左右空白的地方微调
 
 成果的颜色可以看得出来会比原来选择的颜色要淡，因为是线条跟白色背景混合了。
 
-如果使用时出现弹窗** • cv2解析出现错误**，可能是这个错误：
+我的窗口都没有进行置顶，要是桌面比较凌乱可能需要你找找。。。
+
+如果使用时出现弹窗** • cv2解析出现错误**，可能是类似这个错误：
 `[ WARN:0@12.939] global loadsave.cpp:241 cv::findDecoder imread_('D:\Work Files\DesmosETO\src\艾雅法拉.png'): can't open/read file: check file path/integrity`。
 请检查一下文件格式，或者改中文路径为英文，还有事欢迎找我麻烦 ~
 
-我的窗口都没有进行置顶，要是桌面比较凌乱可能需要你找找。。。
-
 还有一个bug就是当你勾选矢量保存的时候应该会出现（除非你安装了reportlab），这个我用来把svg转png（这不是一个必要的功能，毕竟你都希望矢量保存了，我转是为了合成gif）。
-![image](https://github.com/user-attachments/assets/13446da9-271e-4d08-b72d-82e9f1ca7bf9)
-你可以忽略它，这不影响你正确运行程序，就是 output 里面只会有zip（里面是svg图像）而没有合成gif了。
+
+```
+Traceback (most recent call last):
+  File "reportlab\graphics\renderPM.py", line 44, in _getPMBackend
+ModuleNotFoundError: No module named 'rlPyCairo'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "reportlab\graphics\renderPM.py", line 47, in _getPMBackend
+ModuleNotFoundError: No module named '_rl_renderPM'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "multiprocessing\process.py", line 314, in _bootstrap
+  File "multiprocessing\process.py", line 108, in run
+  File "netwoke.py", line 68, in create_gif
+    renderPM.drawToFile(drawing, png_data, fmt="PNG")
+  File "reportlab\graphics\renderPM.py", line 734, in drawToFile
+  File "reportlab\graphics\renderPM.py", line 719, in drawToPMCanvas
+  File "reportlab\graphics\renderPM.py", line 313, in __init__
+  File "reportlab\graphics\renderPM.py", line 327, in _getGState
+  File "reportlab\graphics\renderPM.py", line 49, in _getPMBackend
+reportlab.graphics.utils.RenderPMError: cannot import desired renderPM backend rlPyCairo
+Seek advice at the users list see
+https://pairlist2.pair.net/mailman/listinfo/reportlab-users
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "netwoke.py", line 444, in <module>
+    multiprocessing.freeze_support()
+  File "PyInstaller\hooks\rthooks\pyi_rth_multiprocessing.py", line 50, in _freeze_support
+  File "multiprocessing\spawn.py", line 122, in spawn_main
+  File "multiprocessing\spawn.py", line 135, in _main
+  File "multiprocessing\process.py", line 329, in _bootstrap
+AttributeError: 'NoneType' object has no attribute 'write'
+```
+
+你可以忽略它，这不影响你正确运行程序，就是 output 里面只会有zip（里面是svg图像）而没有合成gif了，我会在后续更新中修复它。
 
 ***
 
