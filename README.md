@@ -153,7 +153,42 @@ def find_and_terminate_process(window_title):
             proc.wait(timeout=1)
 
 find_and_terminate_process("netwoke.exe")
+
 ```
+
+还有就是视频太长了的话，并且你可以接受删除很多帧，可以先运行程序，勾选不自动打开web，他会拆解帧在tempETO文件夹里面，你可以挑选一些帧保留，文件夹带走。下次运行你拿第一张图片给它跑，预先放之前的tempETO文件夹回来，他就会读取所有图片，下面是删除奇数编号文件和重新编号的代码：
+
+```
+import os, re
+
+folder_path = 'D:\\Desktop\\Desktop\\tempETO'
+
+pattern = re.compile(r'frame(\d+)\.png')
+
+files = os.listdir(folder_path)
+
+sorted_files = sorted(
+    (f for f in files if pattern.match(f)),
+    key=lambda x: int(pattern.match(x).group(1))
+)
+
+# 遍历文件列表，删除奇数顺序的文件
+for i in range(0, len(sorted_files), 2):
+    file_path = os.path.join(folder_path, sorted_files[i])
+    os.remove(file_path)
+    print(f"Deleted: {file_path}")
+
+# 从1开始重新编号剩余的图片
+for i, file_name in enumerate(sorted_files, start=1):
+    original_number = int(pattern.match(file_name).group(1))
+    new_file_name = f'frame{i}.png'
+    os.rename(os.path.join(folder_path, file_name), os.path.join(folder_path, new_file_name))
+    print(f'Renamed: {file_name} to {new_file_name}')
+
+print("Renaming operation completed.")
+```
+
+目前还没有支持命令行，下次更新会加入命令行操作。
 
 ***
 
