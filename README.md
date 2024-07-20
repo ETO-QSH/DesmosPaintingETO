@@ -237,4 +237,6 @@ print("Renaming operation completed.")
 
 如果这个你喜欢这个项目，我能不能混一个免费的**Star**呢，谢谢喵 ~
 
+待更新：命令行操作，单文件打包，修复reportlab问题，支持中文路径
+
 ###### 本项目采用 GNU Affero General Public License v3.0 协议
