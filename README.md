@@ -38,6 +38,12 @@
 
 对于一些大型的图片和视频，我只能说我的程序能跑出结果（edged文件夹），但是把大量数据发送到你的浏览器里面你的内存可能会吃不消（out of memory）。对于一些超大的图片你可以适当的缩小先，边缘检测的时候会丢失很少的细节，一个视频（包括gif）会被分解成帧先，或者你可以尝试进行分段？总之减少线条的数量。
 
+如果使用时出现弹窗** • cv2解析出现错误**，可能是这个错误：
+`[ WARN:0@12.939] global loadsave.cpp:241 cv::findDecoder imread_('D:\Work Files\DesmosETO\src\艾雅法拉.png'): can't open/read file: check file path/integrity`。
+请检查一下文件格式，或者改中文路径为英文，还有事欢迎找我麻烦 ~
+
+我的窗口都没有进行置顶，要是桌面比较凌乱可能需要你找找。。。
+
 ### 测试
 
 下面给出部分测试过的样本，在 [src](https://github.com/ETO-QSH/DesmosPaintingETO/tree/main/src) 里面有原图，成果在 [output](https://github.com/ETO-QSH/DesmosPaintingETO/tree/main/output) 里面。（一些比例问题和渲染问题是开发早期的结果）
@@ -56,6 +62,7 @@
 |略nd.mp4|![]()|![]()|`{'turnpolicy': 'MINORITY', 'unit': 3, 'alphamax': 0.75, 'opttolerance': 0.5, 'turdsize': 5, 'opticurve': 'True', 'diameter': 15, 'L2gradient': 'False', 'sigmaColor': 50, 'sigmaSpace': 50, 'lower': 95, 'upper': 100, 'modified': 5}}`
 |ai.jpg|![ai.png](https://github.com/ETO-QSH/DesmosPaintingETO/blob/main/src/ai.png)|![output-png-20240710005336.gif](https://github.com/ETO-QSH/DesmosPaintingETO/blob/main/output/output-png-20240710005336.gif)|`{'turnpolicy': 'MINORITY', 'unit': 3, 'alphamax': 0.75, 'opttolerance': 0.5, 'turdsize': 2, 'opticurve': 'True', 'diameter': 5, 'L2gradient': 'False', 'sigmaColor': 50, 'sigmaSpace': 50, 'lower': 60, 'upper': 150, 'modified': 5}`
 |warma.jpg|![warma.jpg](https://github.com/ETO-QSH/DesmosPaintingETO/blob/main/src/warma.jpg)|![output-png-20240720112948.gif](https://github.com/ETO-QSH/DesmosPaintingETO/blob/main/output/output-png-20240720112948.gif)|`{'turnpolicy': 'MINORITY', 'unit': 3, 'alphamax': 0.75, 'opttolerance': 0.5, 'turdsize': 2, 'opticurve': 'True', 'diameter': 5, 'L2gradient': 'False', 'sigmaColor': 50, 'sigmaSpace': 50, 'lower': 60, 'upper': 150, 'modified': 5}`
+|艾雅法拉.png|![艾雅法拉.png](https://github.com/ETO-QSH/DesmosPaintingETO/blob/main/src/艾雅法拉.png)|![output-png-20240720120530.gif](https://github.com/ETO-QSH/DesmosPaintingETO/blob/main/output/output-png-20240720120530.gif)|`{'turnpolicy': 'MINORITY', 'unit': 3, 'alphamax': 0.75, 'opttolerance': 0.5, 'turdsize': 2, 'opticurve': 'True', 'diameter': 5, 'L2gradient': 'False', 'sigmaColor': 50, 'sigmaSpace': 50, 'lower': 60, 'upper': 150, 'modified': 5}`
 
 如果你决定要亲手调参，有一个技巧就是我们先勾选**不自动打开web**，他会在 edged 目录下面生成成对的文件，一个png一个svg，分别是提到的cv2和potrace的结果。这样在不进行web渲染之前就能看到效果会方便些。不足就是可能要求任务管理器查杀netwoke.exe（调好之后杀就行），或者说可以试试运行这个（psutil是要pip的），它会帮你做到！
 
