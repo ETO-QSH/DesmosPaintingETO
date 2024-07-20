@@ -1,12 +1,14 @@
 # DesmosPaintingETO
 
+### 前言
+
 欢迎来到我的项目！本项目名为**DesmosPaintingETO**，顾名思义就是利用Desmos进行简单绘画的项目。你可以使用它将图片或者视频“画”进Desmos，就像下面那样！（原图来源 --> [https://www.pixiv.net/users/6657532/artworks](https://www.pixiv.net/users/6657532/artworks)）
 
 ![image](https://github.com/ETO-QSH/DesmosPaintingETO/blob/main/output/output-png-20240707123931.gif)
 
 如果你想知道如何简单的完成这样一个作品，希望你能耐心的看后续的内容，它不会太长也不会太难的说。
 
-## 使用说明
+***
 
 ### 下载
 
@@ -15,6 +17,8 @@
 总之，你可以直接下载最新的releases，解压后会得到四个exe文件，一个md文件（就是本文），以及一个pdf文件（本文pdf版）。四个exe中，DesmosPaintingETO.exe是主程序负责GUI，netwoke.exe和showdata.exe是对主程序的支持，分别负责web服务器和展示data，potrace.exe是真正的核心，是一个很有名的算法（大概）。
 
 这里是potrace的链接：[github](https://github.com/lgcc/potrace)、[官网](https://potrace.sourceforge.net/)，感兴趣的可以去瞅瞅。
+
+***
 
 ### 使用
 
@@ -45,6 +49,8 @@
 请检查一下文件格式，或者改中文路径为英文，还有事欢迎找我麻烦 ~
 
 我的窗口都没有进行置顶，要是桌面比较凌乱可能需要你找找。。。
+
+***
 
 ### 测试
 
@@ -83,6 +89,8 @@ def find_and_terminate_process(window_title):
 find_and_terminate_process("netwoke.exe")
 ```
 
+***
+
 ### 尾音
 
 早期测试时的一个小插曲 ~
@@ -95,15 +103,23 @@ find_and_terminate_process("netwoke.exe")
 
 ![image}{Z5$ B2EEIIY24HU( 6](https://github.com/user-attachments/assets/d62dc58f-cda3-4351-b6ee-7c2c073abc85)
 
-如果你像我一样勾选了自动下载，你会在 output 文件夹里面看到一对新的gif和zip文件（文件名随时间），这就完成了所有工作了。
+如果你像我一样勾选了自动下载，你会在 output 文件夹里面看到一对新的gif和zip文件（文件名随时间），这就完成了所有工作了！
+
+***
 
 ### 开发
 
+<img align="right" src="https://github.com/user-attachments/assets/b0b7a522-afd9-448a-a2bc-499a39ab2475"/>
+
 本项目一开始是在Linux下面开发的，因为potrace的python库只在Linux有效，故我保留了Linux时期的代码（有点老旧了，一些tk的api还用不了），但暂时没有继续完善的打算（画gui累死个人）。
 
-里面还有一个**为Windows多进程版本开发的DesmosETO**，这是一开始的设想，我希望在一个文件里面完成所有事（听起来就舒服），但是tk和multiprocessing的兼容性搞得我十分头大，新引入的tkintertools又把我的gui毁了（字面意思，本来依靠一个tk的dpi缩放bug运行，tkintertools说它顺手给修了，啊？）。所以我搞了个三家分晋给他裂了三个exe，但是这样搞得好大的库包了三次，本来用pyinstaller包80M就能解决的现在搞那么大。有大佬会的可以教教不是。
+里面还有一个**为Windows多进程版本开发的DesmosETO**，这是一开始的设想，我希望在一个文件里面完成所有事（听起来就舒服），但是tk和multiprocessing的兼容性搞得我十分头大，新引入的tkintertools又把我的gui毁了（字面意思，本来依靠一个tk的dpi缩放bug运行，tkintertools说它顺手给修了，啊？）。
 
-![image](https://github.com/user-attachments/assets/b0b7a522-afd9-448a-a2bc-499a39ab2475)
+所以我搞了个三家分晋给他裂了三个exe，但是这样搞得好大的库包了三次，本来用pyinstaller包80M就能解决的现在搞那么大。有大佬会的可以教教不是，先提前道个谢！
+
+这就算是本项目的**ToDoList**了把 ~
+
+***
 
 ### 说明
 
