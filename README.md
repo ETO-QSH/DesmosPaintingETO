@@ -54,7 +54,7 @@
 
 |图片名|src|output|测试用参数
 |-|-|-|-
-|预设参数|     {划掉划掉}|     {划掉划掉}|`{'turnpolicy': 'MINORITY', 'unit': 3, 'alphamax': 0.75, 'opttolerance': 0.5, 'turdsize': 2, 'opticurve': 'True', 'diameter': 5, 'L2gradient': 'False', 'sigmaColor': 50, 'sigmaSpace': 50, 'lower': 60, 'upper': 150, 'modified': 5}`
+|预设参数|     {~划掉划掉划掉~}|     {~划掉划掉划掉~}|`{'turnpolicy': 'MINORITY', 'unit': 3, 'alphamax': 0.75, 'opttolerance': 0.5, 'turdsize': 2, 'opticurve': 'True', 'diameter': 5, 'L2gradient': 'False', 'sigmaColor': 50, 'sigmaSpace': 50, 'lower': 60, 'upper': 150, 'modified': 5}`
 |可莉.png|![%E5%8F%AF%E8%8E%89.png](https://github.com/ETO-QSH/DesmosPaintingETO/blob/main/src/%E5%8F%AF%E8%8E%89.png)|![output-png-20240707124130.gif](https://github.com/ETO-QSH/DesmosPaintingETO/blob/main/output/output-png-20240707124130.gif)|`{'turnpolicy': 'MINORITY', 'unit': 3, 'alphamax': 0.75, 'opttolerance': 0.5, 'turdsize': 2, 'opticurve': 'True', 'diameter': 5, 'L2gradient': 'False', 'sigmaColor': 50, 'sigmaSpace': 50, 'lower': 60, 'upper': 150, 'modified': 5}`
 |ETO.png|![ETO.png](https://github.com/ETO-QSH/DesmosPaintingETO/blob/main/src/ETO.png)|![output-png-20240707154151.gif](https://github.com/ETO-QSH/DesmosPaintingETO/blob/main/output/output-png-20240707154151.gif)|`{'turnpolicy': 'MINORITY', 'unit': 3, 'alphamax': 0.75, 'opttolerance': 0.5, 'turdsize': 2, 'opticurve': 'True', 'diameter': 5, 'L2gradient': 'False', 'sigmaColor': 50, 'sigmaSpace': 50, 'lower': 25, 'upper': 150, 'modified': 5}`
 |铃兰.gif|![铃兰.gif](https://github.com/ETO-QSH/DesmosPaintingETO/blob/main/src/%E9%93%83%E5%85%B0.gif)|![output-png-20240707133005.gif](https://github.com/ETO-QSH/DesmosPaintingETO/blob/main/output/output-png-20240707133005.gif)|`{'turnpolicy': 'MINORITY', 'unit': 3, 'alphamax': 0.75, 'opttolerance': 0.5, 'turdsize': 10, 'opticurve': 'True', 'diameter': 10, 'L2gradient': 'False', 'sigmaColor': 50, 'sigmaSpace': 50, 'lower': 30, 'upper': 75, 'modified': 5}`
@@ -108,6 +108,8 @@ find_and_terminate_process("netwoke.exe")
 ### 说明
 
 如果你要提交**Issues**请麻烦使用**English**，这样可以方便所有人阅读。
+
+如果你想靠这个项目混一个Desmos艺术大赛的作品，大可放心这个混不到的。
 
 如果这个你喜欢这个项目，我能不能混一个免费的**Star**呢，谢谢喵 ~
 
