@@ -136,6 +136,7 @@ AttributeError: 'NoneType' object has no attribute 'write'
 |雨.png|![雨.png](https://github.com/ETO-QSH/DesmosPaintingETO/blob/main/src/雨.png)|![output-png-20240720210438.gif](https://github.com/ETO-QSH/DesmosPaintingETO/blob/main/output/output-png-20240720210438.gif)|`{'turnpolicy': 'MINORITY', 'unit': 3, 'alphamax': 0.75, 'opttolerance': 0.5, 'turdsize': 2, 'opticurve': 'True', 'diameter': 5, 'L2gradient': 'False', 'sigmaColor': 50, 'sigmaSpace': 50, 'lower': 60, 'upper': 150, 'modified': 5}`
 |西条.jpg|![西条.jpg](https://github.com/ETO-QSH/DesmosPaintingETO/blob/main/src/西条.jpg)|![output-png-20240720211235.gif](https://github.com/ETO-QSH/DesmosPaintingETO/blob/main/output/output-png-20240720211235.gif)|`{'turnpolicy': 'MINORITY', 'unit': 3, 'alphamax': 0.75, 'opttolerance': 0.5, 'turdsize': 2, 'opticurve': 'True', 'diameter': 5, 'L2gradient': 'False', 'sigmaColor': 50, 'sigmaSpace': 50, 'lower': 60, 'upper': 150, 'modified': 5}`
 |萌新.jpg|![萌新.jpg](https://github.com/ETO-QSH/DesmosPaintingETO/blob/main/src/萌新.jpg)|![output-png-20240720214800.gif](https://github.com/ETO-QSH/DesmosPaintingETO/blob/main/output/output-png-20240720214800.gif)|`{'turnpolicy': 'MINORITY', 'unit': 3, 'alphamax': 0.75, 'opttolerance': 0.5, 'turdsize': 2, 'opticurve': 'True', 'diameter': 5, 'L2gradient': 'False', 'sigmaColor': 50, 'sigmaSpace': 50, 'lower': 60, 'upper': 150, 'modified': 5}`
+|aai.jpg|![aai.jpg](https://github.com/ETO-QSH/DesmosPaintingETO/blob/main/src/aai.jpg)|![output-png-20240720221010.gif](https://github.com/ETO-QSH/DesmosPaintingETO/blob/main/output/output-png-20240720221010.gif)|`{'turnpolicy': 'MINORITY', 'unit': 3, 'alphamax': 0.75, 'opttolerance': 0.5, 'turdsize': 2, 'opticurve': 'True', 'diameter': 5, 'L2gradient': 'False', 'sigmaColor': 50, 'sigmaSpace': 50, 'lower': 60, 'upper': 150, 'modified': 5}`
 
 如果你决定要亲手调参，有一个技巧就是我们先勾选**不自动打开web**，他会在 edged 目录下面生成成对的文件，一个png一个svg，分别是提到的cv2和potrace的结果。这样在不进行web渲染之前就能看到效果会方便些。不足就是可能要求任务管理器查杀netwoke.exe（调好之后杀就行），或者说可以试试运行这个（psutil是要pip的），它会帮你做到！
 
@@ -184,11 +185,15 @@ find_and_terminate_process("netwoke.exe")
 
 ### 说明
 
+现在发布的版本未经过处理我以外任何人的测试，如存在问题请联系我。
+
 如果你要提交**Issues**请麻烦使用**English**，这样可以方便所有人阅读。
 
 如果你想靠这个项目混一个Desmos艺术大赛的作品，大可放心这个混不到的。
 
 如果被杀毒软件关小黑屋了可以救一下，世界上没那么多病毒。
+
+如果图片有侵权请联系我，我会尽快进行删除。
 
 如果你得到了一些不错的作品可以在Issues里面分享鸭。
 
