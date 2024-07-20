@@ -48,7 +48,7 @@ ps：滑块可以点击左右空白的地方微调
 
 成果的颜色可以看得出来会比原来选择的颜色要淡，因为是线条跟白色背景混合了。
 
-我的窗口都没有进行置顶，要是桌面比较凌乱可能需要你找找。。。
+我的窗口都没有进行置顶（结束的弹窗有提示音），要是桌面比较凌乱可能需要你找找。。。
 
 如果使用时出现弹窗** • cv2解析出现错误**，可能是类似这个错误：
 `[ WARN:0@12.939] global loadsave.cpp:241 cv::findDecoder imread_('D:\Work Files\DesmosETO\src\艾雅法拉.png'): can't open/read file: check file path/integrity`。
@@ -138,6 +138,8 @@ AttributeError: 'NoneType' object has no attribute 'write'
 |萌新.jpg|![萌新.jpg](https://github.com/ETO-QSH/DesmosPaintingETO/blob/main/src/萌新.jpg)|![output-png-20240720214800.gif](https://github.com/ETO-QSH/DesmosPaintingETO/blob/main/output/output-png-20240720214800.gif)|`{'turnpolicy': 'MINORITY', 'unit': 3, 'alphamax': 0.75, 'opttolerance': 0.5, 'turdsize': 2, 'opticurve': 'True', 'diameter': 5, 'L2gradient': 'False', 'sigmaColor': 50, 'sigmaSpace': 50, 'lower': 60, 'upper': 150, 'modified': 5}`
 |aai.jpg|![aai.jpg](https://github.com/ETO-QSH/DesmosPaintingETO/blob/main/src/aai.jpg)|![output-png-20240720221010.gif](https://github.com/ETO-QSH/DesmosPaintingETO/blob/main/output/output-png-20240720221010.gif)|`{'turnpolicy': 'MINORITY', 'unit': 3, 'alphamax': 0.75, 'opttolerance': 0.5, 'turdsize': 2, 'opticurve': 'True', 'diameter': 5, 'L2gradient': 'False', 'sigmaColor': 50, 'sigmaSpace': 50, 'lower': 60, 'upper': 150, 'modified': 5}`
 |skeb.jpg|![skeb.jpg](https://github.com/ETO-QSH/DesmosPaintingETO/blob/main/src/skeb.jpg)|![output-png-20240720221654.gif](https://github.com/ETO-QSH/DesmosPaintingETO/blob/main/output/output-png-20240720221654.gif)|`{'turnpolicy': 'MINORITY', 'unit': 3, 'alphamax': 0.75, 'opttolerance': 0.5, 'turdsize': 2, 'opticurve': 'True', 'diameter': 5, 'L2gradient': 'False', 'sigmaColor': 50, 'sigmaSpace': 50, 'lower': 60, 'upper': 150, 'modified': 5}`
+|skeb.jpg|![skeb.jpg](https://github.com/ETO-QSH/DesmosPaintingETO/blob/main/src/skeb.jpg)|![output-png-20240720221654.gif](https://github.com/ETO-QSH/DesmosPaintingETO/blob/main/output/output-png-20240720221654.gif)|`{'turnpolicy': 'MINORITY', 'unit': 3, 'alphamax': 0.75, 'opttolerance': 0.5, 'turdsize': 2, 'opticurve': 'True', 'diameter': 5, 'L2gradient': 'False', 'sigmaColor': 50, 'sigmaSpace': 50, 'lower': 60, 'upper': 150, 'modified': 5}`
+|霍霍.jpg|![霍霍.jpg](https://github.com/ETO-QSH/DesmosPaintingETO/blob/main/src/霍霍.jpg)|![output-png-20240720222847.gif](https://github.com/ETO-QSH/DesmosPaintingETO/blob/main/output/output-png-20240720222847.gif)|`{'turnpolicy': 'MINORITY', 'unit': 3, 'alphamax': 0.75, 'opttolerance': 0.5, 'turdsize': 2, 'opticurve': 'True', 'diameter': 5, 'L2gradient': 'False', 'sigmaColor': 50, 'sigmaSpace': 50, 'lower': 60, 'upper': 150, 'modified': 5}`
 
 如果你决定要亲手调参，有一个技巧就是我们先勾选**不自动打开web**，他会在 edged 目录下面生成成对的文件，一个png一个svg，分别是提到的cv2和potrace的结果。这样在不进行web渲染之前就能看到效果会方便些。不足就是可能要求任务管理器查杀netwoke.exe（调好之后杀就行），或者说可以试试运行这个（psutil是要pip的），它会帮你做到！
 
