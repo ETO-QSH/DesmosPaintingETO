@@ -78,7 +78,7 @@ ps：滑块可以点击左右空白的地方微调
 |铃兰.png|![铃兰.png](https://github.com/ETO-QSH/DesmosPaintingETO/blob/main/src/铃兰.png)|![output-png-20240720143216.gif](https://github.com/ETO-QSH/DesmosPaintingETO/blob/main/output/output-png-20240720143216.gif)|`{'turnpolicy': 'MINORITY', 'unit': 3, 'alphamax': 0.75, 'opttolerance': 0.5, 'turdsize': 2, 'opticurve': 'True', 'diameter': 5, 'L2gradient': 'False', 'sigmaColor': 50, 'sigmaSpace': 50, 'lower': 60, 'upper': 150, 'modified': 5}`
 |星尘.jpg|![星尘.jpg](https://github.com/ETO-QSH/DesmosPaintingETO/blob/main/src/星尘.jpg)|![output-png-20240720154250.gif](https://github.com/ETO-QSH/DesmosPaintingETO/blob/main/output/output-png-20240720154250.gif)|`{'turnpolicy': 'MINORITY', 'unit': 3, 'alphamax': 0.75, 'opttolerance': 0.5, 'turdsize': 2, 'opticurve': 'True', 'diameter': 5, 'L2gradient': 'False', 'sigmaColor': 50, 'sigmaSpace': 50, 'lower': 60, 'upper': 150, 'modified': 5}`
 
-（后面摆烂了全部用预设参数了，这不更说明不用调也行不是）
+（后面摆烂了全部用预设参数了，这不更说明不用调也行不是，其实调了效果更好 ~）
 
 如果你决定要亲手调参，有一个技巧就是我们先勾选**不自动打开web**，他会在 edged 目录下面生成成对的文件，一个png一个svg，分别是提到的cv2和potrace的结果。这样在不进行web渲染之前就能看到效果会方便些。不足就是可能要求任务管理器查杀netwoke.exe（调好之后杀就行），或者说可以试试运行这个（psutil是要pip的），它会帮你做到！
 
