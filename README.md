@@ -160,7 +160,7 @@ find_and_terminate_process("netwoke.exe")
 
 ![image}{Z5$ B2EEIIY24HU( 6](https://github.com/user-attachments/assets/d62dc58f-cda3-4351-b6ee-7c2c073abc85)
 
-如果你像我一样勾选了自动下载，你会在 output 文件夹里面看到一对新的gif和zip文件（文件名随时间），这就完成了所有工作了！
+如果你像我一样勾选了自动下载，你会在 output 文件夹里面看到一对新的gif和zip文件（文件名随时间），这就完成了所有工作了！（我这破电脑不到半分钟）
 
 ***
 
