@@ -107,7 +107,9 @@ AttributeError: 'NoneType' object has no attribute 'write'
 
 你大可以跳过这一段表格，因为其实并不重要，图是好久之前到处捡的，只是你真的不想看看效果的吗 ~
 
-（后面摆烂了全部用预设参数了，这不更说明不用调也行不是，预设参数的效果还不赖耶，其实调了效果更好 ~）
+当然这不代表最高画质，我的破电脑30000多线就歇菜了所以我是压过线条数量的（直接一半一半砍的随意）
+
+（后面摆烂了全部用预设参数了，这不更说明不用调也行不是，预设参数的效果还不赖耶，其实调了效果更好）
 
 |图片名|src|output|测试用参数
 |-|-|-|-
@@ -142,6 +144,7 @@ AttributeError: 'NoneType' object has no attribute 'write'
 |skeb.jpg|![skeb.jpg](https://github.com/ETO-QSH/DesmosPaintingETO/blob/main/src/skeb.jpg)|![output-png-20240720221654.gif](https://github.com/ETO-QSH/DesmosPaintingETO/blob/main/output/output-png-20240720221654.gif)|`{'turnpolicy': 'MINORITY', 'unit': 3, 'alphamax': 0.75, 'opttolerance': 0.5, 'turdsize': 2, 'opticurve': 'True', 'diameter': 5, 'L2gradient': 'False', 'sigmaColor': 50, 'sigmaSpace': 50, 'lower': 60, 'upper': 150, 'modified': 5}`
 |霍霍.jpg|![霍霍.jpg](https://github.com/ETO-QSH/DesmosPaintingETO/blob/main/src/霍霍.jpg)|![output-png-20240720222847.gif](https://github.com/ETO-QSH/DesmosPaintingETO/blob/main/output/output-png-20240720222847.gif)|`{'turnpolicy': 'MINORITY', 'unit': 3, 'alphamax': 0.75, 'opttolerance': 0.5, 'turdsize': 2, 'opticurve': 'True', 'diameter': 5, 'L2gradient': 'False', 'sigmaColor': 50, 'sigmaSpace': 50, 'lower': 60, 'upper': 150, 'modified': 5}`
 |Alice.jpg|![Alice.jpg](https://github.com/ETO-QSH/DesmosPaintingETO/blob/main/src/Alice.jpg)|![output-png-20240720223755.gif](https://github.com/ETO-QSH/DesmosPaintingETO/blob/main/output/output-png-20240720223755.gif)|`{'turnpolicy': 'MINORITY', 'unit': 3, 'alphamax': 0.75, 'opttolerance': 0.5, 'turdsize': 2, 'opticurve': 'True', 'diameter': 5, 'L2gradient': 'False', 'sigmaColor': 50, 'sigmaSpace': 50, 'lower': 60, 'upper': 150, 'modified': 5}`
+|网页截图.png|![网页截图.png](https://github.com/ETO-QSH/DesmosPaintingETO/blob/main/src/网页截图.png)|![edged_0_8660.svg](https://github.com/ETO-QSH/DesmosPaintingETO/blob/main/output/edged_0_8660.svg)|`{'turnpolicy': 'MINORITY', 'unit': 3, 'alphamax': 0.75, 'opttolerance': 0.5, 'turdsize': 2, 'opticurve': 'True', 'diameter': 5, 'L2gradient': 'False', 'sigmaColor': 50, 'sigmaSpace': 50, 'lower': 60, 'upper': 150, 'modified': 5}`
 
 如果你决定要亲手调参，有一个技巧就是我们先勾选**不自动打开web**，他会在 edged 目录下面生成成对的文件，一个png一个svg，分别是提到的cv2和potrace的结果。这样在不进行web渲染之前就能看到效果会方便些。不足就是可能要求任务管理器查杀netwoke.exe（调好之后杀就行），或者说可以试试运行这个（psutil是要pip的），它会帮你做到！
 
@@ -237,6 +240,8 @@ print("Renaming operation completed.")
 如果你得到了一些不错的作品可以在Issues里面分享鸭。
 
 如果这个你喜欢这个项目，我能不能混一个免费的**Star**呢，谢谢喵 ~
+
+早期有借鉴这个项目[DesmosBezierRenderer](https://github.com/kevinjycui/DesmosBezierRenderer)，一开始只是想要搞一下在Windows里面用，想不到就重写了。
 
 待更新：命令行操作，单文件打包，修复reportlab问题，支持中文路径
 
