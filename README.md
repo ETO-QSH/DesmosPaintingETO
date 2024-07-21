@@ -99,6 +99,8 @@ AttributeError: 'NoneType' object has no attribute 'write'
 
 你可以忽略它，这不影响你正确运行程序，就是 output 里面只会有zip（里面是svg图像）而没有合成gif了，我会在后续更新中修复它。
 
+分解帧的时候你要是太多了可能会假装无响应，搁一边放着就行。
+
 ***
 
 ### 测试
