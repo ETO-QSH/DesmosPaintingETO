@@ -14,7 +14,7 @@
 
 我在 [Releases](https://github.com/ETO-QSH/DesmosPaintingETO/releases) 里面提供了已经打包好的项目，我使用pyinstaller打包，并且我执意使用onefile模式生成单文件exe使得相较于自己运行.py文件占用了更大的体积，所以看起来有些庞大不是。
 
-总之，你可以直接下载最新的releases，解压后会得到四个exe文件，一个md文件（就是本文），以及一个pdf文件（本文pdf版）。四个exe中，DesmosPaintingETO.exe是主程序负责GUI，netwoke.exe和showdata.exe是对主程序的支持，分别负责web服务器和展示data，potrace.exe是真正的核心，是一个很有名的算法（大概）。
+总之，你可以直接下载最新的releases，解压后会得到两个exe文件，一个md文件（就是本文），以及一个pdf文件（本文pdf版）。DesmosPaintingETO.exe是主程序，也是我编写的部分，potrace.exe是真正的核心，是一个很有名的算法（大概）。
 
 这里是potrace的链接：[github](https://github.com/lgcc/potrace)、[官网](https://potrace.sourceforge.net/)，感兴趣的可以去瞅瞅。
 
@@ -28,7 +28,7 @@
 
 （我没有测试不同DPI的情况，我的屏幕是2160×1440，缩放是150%，在我的这里是正常的说）
 
-![image](https://github.com/user-attachments/assets/d9da71a8-9553-4b0e-9de1-98302642ad4d)
+![image](https://github.com/user-attachments/assets/4a638526-c4bc-468c-b8c0-38eaf7d9305d)
 
 我们将鼠标悬停在 **?** 上面后，会显示一些解释性文本，它会提示你基本的操作。
 
@@ -50,54 +50,11 @@ ps：滑块可以点击左右空白的地方微调
 
 成果的颜色可以看得出来会比原来选择的颜色要淡，因为是线条跟白色背景混合了。
 
-我的窗口都没有进行置顶（结束的弹窗有提示音），要是桌面比较凌乱可能需要你找找。。。
+我的窗口都没有进行置顶（结束的弹窗有提示音，任务栏也会闪烁），要是桌面比较凌乱可能需要你找找。。。
 
 如果使用时出现弹窗** • cv2解析出现错误**，可能是类似这个错误：
 `[ WARN:0@12.939] global loadsave.cpp:241 cv::findDecoder imread_('D:\Work Files\DesmosETO\src\艾雅法拉.png'): can't open/read file: check file path/integrity`。
 请检查一下文件格式，或者改中文路径为英文，还有事欢迎找我麻烦 ~
-
-还有一个bug就是当你勾选矢量保存的时候应该会出现（除非你安装了reportlab），这个我用来把svg转png（这不是一个必要的功能，毕竟你都希望矢量保存了，我转是为了合成gif）。
-
-```
-Traceback (most recent call last):
-  File "reportlab\graphics\renderPM.py", line 44, in _getPMBackend
-ModuleNotFoundError: No module named 'rlPyCairo'
-
-During handling of the above exception, another exception occurred:
-
-Traceback (most recent call last):
-  File "reportlab\graphics\renderPM.py", line 47, in _getPMBackend
-ModuleNotFoundError: No module named '_rl_renderPM'
-
-During handling of the above exception, another exception occurred:
-
-Traceback (most recent call last):
-  File "multiprocessing\process.py", line 314, in _bootstrap
-  File "multiprocessing\process.py", line 108, in run
-  File "netwoke.py", line 68, in create_gif
-    renderPM.drawToFile(drawing, png_data, fmt="PNG")
-  File "reportlab\graphics\renderPM.py", line 734, in drawToFile
-  File "reportlab\graphics\renderPM.py", line 719, in drawToPMCanvas
-  File "reportlab\graphics\renderPM.py", line 313, in __init__
-  File "reportlab\graphics\renderPM.py", line 327, in _getGState
-  File "reportlab\graphics\renderPM.py", line 49, in _getPMBackend
-reportlab.graphics.utils.RenderPMError: cannot import desired renderPM backend rlPyCairo
-Seek advice at the users list see
-https://pairlist2.pair.net/mailman/listinfo/reportlab-users
-
-During handling of the above exception, another exception occurred:
-
-Traceback (most recent call last):
-  File "netwoke.py", line 444, in <module>
-    multiprocessing.freeze_support()
-  File "PyInstaller\hooks\rthooks\pyi_rth_multiprocessing.py", line 50, in _freeze_support
-  File "multiprocessing\spawn.py", line 122, in spawn_main
-  File "multiprocessing\spawn.py", line 135, in _main
-  File "multiprocessing\process.py", line 329, in _bootstrap
-AttributeError: 'NoneType' object has no attribute 'write'
-```
-
-你可以忽略它，这不影响你正确运行程序，就是 output 里面只会有zip（里面是svg图像）而没有合成gif了，我会在后续更新中修复它。
 
 分解帧的时候你要是太多了可能会假装无响应，搁一边放着就行。
 
@@ -149,21 +106,9 @@ AttributeError: 'NoneType' object has no attribute 'write'
 |网页截图.png|![网页截图.png](https://github.com/ETO-QSH/DesmosPaintingETO/blob/main/src/网页截图.png)|![edged_0_8660.svg](https://github.com/ETO-QSH/DesmosPaintingETO/blob/main/output/edged_0_8660.svg)|`{'turnpolicy': 'MINORITY', 'unit': 3, 'alphamax': 0.75, 'opttolerance': 0.5, 'turdsize': 2, 'opticurve': 'True', 'diameter': 5, 'L2gradient': 'False', 'sigmaColor': 50, 'sigmaSpace': 50, 'lower': 60, 'upper': 150, 'modified': 5}`
 |明日方舟.jpg|![明日方舟.jpg](https://github.com/ETO-QSH/DesmosPaintingETO/blob/main/src/明日方舟.jpg)|![edged_0_25099.bmp](https://github.com/ETO-QSH/DesmosPaintingETO/blob/main/output/edged_0_25099.bmp)|`{'turnpolicy': 'MINORITY', 'unit': 3, 'alphamax': 0.75, 'opttolerance': 0.5, 'turdsize': 2, 'opticurve': 'True', 'diameter': 5, 'L2gradient': 'False', 'sigmaColor': 50, 'sigmaSpace': 50, 'lower': 60, 'upper': 150, 'modified': 5}`
 
-如果你决定要亲手调参，有一个技巧就是我们先勾选**不自动打开web**，他会在 edged 目录下面生成成对的文件，一个png一个svg，分别是提到的cv2和potrace的结果。这样在不进行web渲染之前就能看到效果会方便些。不足就是可能要求任务管理器查杀netwoke.exe（调好之后杀就行），或者说可以试试运行这个（psutil是要pip的），它会帮你做到！
+如果你决定要亲手调参，有一个技巧就是我们先勾选**不自动打开web**，他会在 edged 目录下面生成成对的文件，一个png一个svg，分别是提到的cv2和potrace的结果。这样在不进行web渲染之前就能看到效果会方便些。
 
-```
-import psutil
-
-def find_and_terminate_process(window_title):
-    for proc in psutil.process_iter(['pid', 'name']):
-        if window_title in proc.info['name']:
-            proc.terminate()
-            proc.wait(timeout=1)
-
-find_and_terminate_process("netwoke.exe")
-```
-
-还有就是视频太长了的话（其实长不是事，就是不要有太复杂的帧直接给网页搞崩溃了就行，尽量不要给你电脑上强度不是），并且你可以接受删除很多帧，可以先运行程序，勾选不自动打开web，他会拆解帧在tempETO文件夹里面，你可以挑选一些帧保留，文件夹带走。下次运行你拿第一张图片给它跑，预先放之前的tempETO文件夹回来，他就会读取所有图片（年轻人来骗），下面是删除奇数编号文件和重新编号的代码：
+还有就是视频太长了的话（其实长不是事，就是不要有太复杂的帧直接给网页搞崩溃了就行，尽量不要给你电脑上强度不是），并且你可以接受删除很多帧，可以先运行程序，勾选不自动打开web，他会拆解帧在tempETO文件夹里面，你可以挑选一些帧保留，文件夹带走。下次运行你拿第一张图片给它跑，预先放之前的tempETO文件夹回来，他就会读取所有图片（来骗不是），下面是删除奇数编号文件和重新编号的代码：
 
 ```
 import os, re
@@ -195,7 +140,7 @@ for i, file_name in enumerate(sorted_files, start=1):
 print("Renaming operation completed.")
 ```
 
-目前还没有支持命令行，下次更新会加入命令行操作。
+目前还没有支持命令行，下次更新会加入命令行操作。（要不再下次吧，懒得动）
 
 ***
 
@@ -213,17 +158,15 @@ print("Renaming operation completed.")
 
 如果你像我一样勾选了自动下载，你会在 output 文件夹里面看到一对新的gif和zip文件（文件名随时间），这就完成了所有工作了！（我这破电脑不到半分钟）
 
+对了上面的图里面的窗口被集成进主窗口了，只能说效果更好了不是。（因为字体的原因有点对不齐）
+
 ***
 
 ### 开发
 
-<img align="right" src="https://github.com/user-attachments/assets/b0b7a522-afd9-448a-a2bc-499a39ab2475"/>
+目前项目的版本是2.0，处理了很多乱七八糟的问题，如果没什么大事，下次大更新会在好久之后或者说什么时候想起来有兴致不是。
 
-本项目一开始是在Linux下面开发的，因为potrace的python库只在Linux有效，故我保留了Linux时期的代码（有点老旧了，一些tk的api还用不了），但暂时没有继续完善的打算（画gui累死个人）。
-
-里面还有一个**为Windows多进程版本开发的DesmosETO**，这是一开始的设想，我希望在一个文件里面完成所有事（听起来就舒服），但是tk和multiprocessing的兼容性搞得我十分头大，新引入的tkintertools又把我的gui毁了（字面意思，本来依靠一个tk的dpi缩放bug运行，tkintertools说它顺手给修了，啊？）。
-
-所以我搞了个三家分晋给他裂了三个exe，但是这样搞得好大的库包了三次，本来用pyinstaller包80M就能解决的现在搞那么大。有大佬会的可以教教不是 ~
+现在也没什么更新计划，什么时候有想法再写点 To Do List 吧。
 
 
 ***
