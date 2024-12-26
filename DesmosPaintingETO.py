@@ -15,7 +15,7 @@ from tkinter import ttk, Canvas, filedialog, messagebox, DISABLED, END, NORMAL
 import io, os, re, cv2, sys, copy, json, time, numpy, base64, pyglet, random, shutil, zipfile, \
        datetime, tempfile, colorsys, pyperclip, threading, subprocess, webbrowser, multiprocessing
 
-# os.path.dirname(os.path.abspath(__file__)), os.path.dirname(os.path.abspath(__file__))
+# os.path.dirname(os.path.abspath(__file__)), os.path.dirname(os.path.realpath(sys.executable))
 
 def creat_index(PORT, path):
     global index_path
