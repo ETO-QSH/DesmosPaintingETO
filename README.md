@@ -187,7 +187,7 @@ print("Renaming operation completed.")
 
 如果这个你喜欢这个项目，我能不能混一个免费的**Star**呢，谢谢喵 ~
 
-早期有借鉴这个项目[DesmosBezierRenderer](https://github.com/kevinjycui/DesmosBezierRenderer)，一开始只是想要搞一下在Windows里面用，想不到就重写了。
+早期有借鉴这个项目[DesmosBezierRenderer](https://github.com/kevinjycui/DesmosBezierRenderer)，一开始只是想要搞一下在Windows里面用，搞着搞着就重写了，不够内核一个还是差不多。
 
 待更新：命令行操作，支持中文路径
 
