@@ -14,7 +14,7 @@
 
 我在 [Releases](https://github.com/ETO-QSH/DesmosPaintingETO/releases) 里面提供了已经打包好的项目，我使用pyinstaller打包，并且我执意使用onefile模式生成单文件exe使得相较于自己运行.py文件占用了更大的体积，所以看起来有些庞大不是。
 
-总之，你可以直接下载最新的releases，解压后会得到两个exe文件，一个md文件（就是本文），以及一个pdf文件（本文pdf版）。DesmosPaintingETO.exe是主程序，也是我编写的部分，potrace.exe是真正的核心，是一个很有名的算法（大概）。
+总之，你可以直接下载最新的releases，解压后会得到两个exe文件，一个md文件（就是本文），以及一个pdf文件（本文pdf版），一个ttf文件（字体文件）。DesmosPaintingETO.exe是主程序，也是我编写的部分，potrace.exe是真正的核心，是一个很有名的算法（大概），通过命令行调用。
 
 这里是potrace的链接：[github](https://github.com/lgcc/potrace)、[官网](https://potrace.sourceforge.net/)，感兴趣的可以去瞅瞅。
 
