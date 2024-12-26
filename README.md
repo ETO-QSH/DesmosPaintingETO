@@ -189,6 +189,6 @@ print("Renaming operation completed.")
 
 早期有借鉴这个项目[DesmosBezierRenderer](https://github.com/kevinjycui/DesmosBezierRenderer)，一开始只是想要搞一下在Windows里面用，想不到就重写了。
 
-待更新：命令行操作，单文件打包，修复reportlab问题，支持中文路径
+待更新：命令行操作，支持中文路径
 
 ###### 本项目采用 GNU Affero General Public License v3.0 协议
