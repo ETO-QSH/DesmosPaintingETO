@@ -1195,7 +1195,7 @@ def delete_temp_folder(path):
 def backend():
     os.makedirs('edged', exist_ok=True)
     with multiprocessing.Pool(processes=multiprocessing.cpu_count()) as pool:
-        print(getTime() + '读取到tempETO文件夹内共{}帧'.format(len(os.listdir(FRAME_DIR))))
+        print(getTime() + f'读取到{FRAME_DIR}文件夹内共{len(os.listdir(FRAME_DIR))}帧')
         for frame_index in list(range(len(os.listdir(FRAME_DIR)))):
             try:
                 result = pool.apply_async(get_expressions, args=(frame_index, PORT, COLOUR, BILATERAL_FILTER,))
