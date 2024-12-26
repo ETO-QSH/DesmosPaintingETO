@@ -53,10 +53,12 @@ ps：滑块可以点击左右空白的地方微调
 我的窗口都没有进行置顶（结束的弹窗有提示音，任务栏也会闪烁），要是桌面比较凌乱可能需要你找找。。。
 
 如果使用时出现弹窗** • cv2解析出现错误**，可能是类似这个错误：
-`[ WARN:0@12.939] global loadsave.cpp:241 cv::findDecoder imread_('D:\Work Files\DesmosETO\src\艾雅法拉.png'): can't open/read file: check file path/integrity`。
+`[ WARN:0@12.939] global loadsave.cpp:241 cv::findDecoder imread_('D:\Work Files\DesmosETO\src\艾雅法拉.png'): can't open/read file: check file path/integrity`
 请检查一下文件格式，或者改中文路径为英文，还有事欢迎找我麻烦 ~
 
 分解帧的时候你要是太多了可能会假装无响应，搁一边放着就行。
+
+打开网页后加载不出来，F12里面如果是 `Desmos is not defined` 那就说明你网不好。
 
 ***
 
@@ -168,6 +170,8 @@ print("Renaming operation completed.")
 
 现在也没什么更新计划，什么时候有想法再写点 To Do List 吧。
 
+存一下打包命令 ~
+`pyinstaller "D:\Work Files\DesmosPaintingETO\DesmosPaintingETO.py" --onefile --noconsole --icon="D:\Work Files\DesmosPaintingETO\DesmosPaintingETO.ico"  --paths "D:\Work Files\DesmosPaintingETO\.venv\Lib\site-packages" --add-data "D:\Work Files\DesmosPaintingETO\.venv\Lib\site-packages\tkinterdnd2;tkinterdnd2" --hidden-import=tkinterdnd2`
 
 ***
 
