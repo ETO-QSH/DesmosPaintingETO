@@ -193,6 +193,6 @@ print("Renaming operation completed.")
 
 早期有借鉴这个项目[DesmosBezierRenderer](https://github.com/kevinjycui/DesmosBezierRenderer)，一开始只是想要搞一下在Windows里面用，搞着搞着就重写了，不够内核一个还是差不多。
 
-待更新：命令行操作，支持中文路径
+待更新：命令行操作，支持中文路径（代码已经改了但懒得打包QWQ）
 
 ###### 本项目采用 GNU Affero General Public License v3.0 协议
