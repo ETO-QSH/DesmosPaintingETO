@@ -20,7 +20,7 @@ import io, os, re, cv2, sys, copy, json, time, numpy, base64, pyglet, random, sh
 def creat_index(PORT, path):
     global index_path
     if path != None: os.remove(path)
-    with open(os.path.join(os.path.dirname(os.path.abspath(__file__)), 'index.html'), 'w') as file:
+    with open(os.path.join(os.path.dirname(os.path.realpath(sys.executable)), 'index.html'), 'w') as file:
         index_text = '''
 <script src='https://www.desmos.com/api/v1.8/calculator.js?apiKey={{ api_key }}'></script>
 <html lang='en'>
@@ -196,12 +196,12 @@ def creat_index(PORT, path):
 </html>
 '''
         file.write(re.sub(r'http://127.0.0.1:\d+', 'http://127.0.0.1:{}'.format(PORT), index_text))
-        index_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'index.html')
+        index_path = os.path.join(os.path.dirname(os.path.realpath(sys.executable)), 'index.html')
 
 def creat_sendLogs(PORT, path):
     global js_path
     if path != None: os.remove(path)
-    with open(os.path.join(os.path.dirname(os.path.abspath(__file__)), 'sendLogs.js'), 'w') as file:
+    with open(os.path.join(os.path.dirname(os.path.realpath(sys.executable)), 'sendLogs.js'), 'w') as file:
         file.write('''function sendToServer(message) {{
   const data = JSON.stringify({{ message: message }});
   const xhr = new XMLHttpRequest();
@@ -215,12 +215,12 @@ consoleETO = {{
     sendToServer(message);
   }}
 }};'''.format(PORT))
-    js_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'sendLogs.js')
+    js_path = os.path.join(os.path.dirname(os.path.realpath(sys.executable)), 'sendLogs.js')
 
 def creat_calculator(PORT, path):
     global calculator_path
     if path != None: os.remove(path)
-    with open(os.path.join(os.path.dirname(os.path.abspath(__file__)), 'calculator.html'), 'w') as file:
+    with open(os.path.join(os.path.dirname(os.path.realpath(sys.executable)), 'calculator.html'), 'w') as file:
         file.write('''<!DOCTYPE html>
 <html>
 <head>
@@ -229,7 +229,7 @@ def creat_calculator(PORT, path):
 </script>
 </head>
 </html>'''.format(PORT))
-    calculator_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'calculator.html')
+    calculator_path = os.path.join(os.path.dirname(os.path.realpath(sys.executable)), 'calculator.html')
 
 def find_path(directory, filename):
     for root, dirs, files in os.walk(directory):
@@ -678,6 +678,10 @@ def delete_temp_folder(path):
     if os.path.exists(temp_dir):
         shutil.rmtree(temp_dir)
 
+def cv_imread(filePath):
+    cv_img = cv2.imdecode(np.fromfile(filePath, dtype=np.uint8), -1)
+    return cv_img
+
 def on_close():
     delete_temp_folder(FRAME_DIR)
     if os.path.exists(js_path): os.remove(js_path)
@@ -834,7 +838,7 @@ putbase64img(x=150, y=8, width=30, height=24, size=(30, 24), url='https://github
                     Q8OSzozLfqkOEK0CKLJI0SLIJo8QrQIoskjRIsgmjxCa63/AE9sk6rkBl4RAAAAAElFTkSuQmCC')
 
 
-app = Flask(__name__, template_folder=os.path.dirname(os.path.abspath(__file__)))
+app = Flask(__name__, template_folder=os.path.dirname(os.path.realpath(sys.executable)))
 app.static_folder = os.path.dirname(os.path.realpath(sys.executable))
 CORS(app)
 
@@ -1102,7 +1106,7 @@ def Svg2Curves(svg_path):
 def get_contours(filename, framevalue, PORT, BILATERAL_FILTER):
     lower, upper = hidden_window_data['lower'], hidden_window_data['upper']
     USE_L2_GRADIENT = {'True': True, 'False': False}
-    image = cv2.imread(filename)
+    image = cv_imread(filename)
     gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
     if BILATERAL_FILTER:
         filtered = cv2.bilateralFilter(gray, int(hidden_window_data['diameter']), int(hidden_window_data['sigmaColor']), int(hidden_window_data['sigmaSpace']))
